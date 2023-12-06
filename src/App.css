@@ -164,6 +164,7 @@ button.favorites-list:active {
     right: 0;
     bottom: 0;
     position: fixed;
+    z-index: 1;
 }
 
 .load-error h3 {

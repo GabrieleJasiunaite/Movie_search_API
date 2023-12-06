@@ -14,7 +14,7 @@ const Modal = ({ movieDetails, toggleModal, isLoading, error }) => {
                     <p><strong>Genres: </strong>{movieDetails.genres.map(genre => genre.name + " ")}</p>
                     <p><strong>Box Office: </strong>{(movieDetails.revenue / 1000000).toFixed(2)} mln.</p>
                     <p><strong>Plot: </strong>{movieDetails.overview}</p>
-                    <p><strong>Rating: </strong>{movieDetails.vote_average}</p>
+                    <p><strong>Rating: </strong>{movieDetails.vote_average.toFixed(2)}</p>
                     <p><strong>Vote Count: </strong>{movieDetails.vote_count}</p>
 
                     <button className='close-modal' onClick={toggleModal}>&#10006;</button>

@@ -1,42 +1,59 @@
+:root {
+    --primary: #0d253f;
+    --tertiary: #90cea1;
+    --shadow: #628c6d;
+    --highlight: #beffd5;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #00072D;
+    background-color: var(--primary);
     padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .favorites {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+    z-index: 1;
 
 }
 
 .favorites img {
-    width: 50px
+    width: 50px;
 }
 
 button.favorites-list {
     width: 112px;
     margin: 0;
-    background-color: #378805;
+    background-color: var(--tertiary);
     border-radius: 5px;
     border: none;
-    color: white;
+    color: var(--primary);
     padding: 10px 20px;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 .search-bar {
-    margin: 40px auto;
+    margin: 20px auto 40px;
     max-width: 400px;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 20px;
+    z-index: 1;
 }
 
 .search-bar input {
@@ -45,15 +62,17 @@ button.favorites-list {
     border: none;
     padding: 0 0 0 10px;
     outline: none;
+    box-shadow: inset 2px 2px 10px grey,
+        inset -2px -2px 10px grey;
 }
 
 .search-bar button {
     width: 40px;
     height: 40px;
     border: none;
-    background-color: #378805;
+    background-color: var(--tertiary);
     border-radius: 0 20px 20px 0;
-    color: white;
+    color: var(--primary);
     font-size: 16px;
     padding: 0 7px 0 0;
     cursor: pointer;
@@ -61,11 +80,11 @@ button.favorites-list {
 
 .search-bar select {
     appearance: none;
-    background-color: #378805;
+    background-color: var(--tertiary);
     border: none;
     padding: 10px 5px 10px 15px;
     border-radius: 20px 0 0 20px;
-    color: white;
+    color: var(--primary);
     height: 40px;
 }
 
@@ -92,6 +111,10 @@ button.favorites-list {
     position: relative;
 }
 
+.movie h3 {
+    font-weight: 700;
+}
+
 .movie button.watchlist {
     position: absolute;
     top: 10px;
@@ -102,6 +125,7 @@ button.favorites-list {
 }
 
 .movie button.watchlist i {
+    color: white;
     font-size: 20px;
 }
 
@@ -110,17 +134,19 @@ button.favorites-list {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 10px #0c1e31;
 }
 
 .movie button {
     width: 40%;
     margin: 0 auto;
-    background-color: #378805;
+    background-color: var(--tertiary);
     border-radius: 5px;
     border: none;
-    color: white;
+    color: var(--primary);
     padding: 10px 20px;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 a.top {
@@ -136,14 +162,15 @@ a.top i {
 }
 
 a.top:active {
-    color: #378805;
+    color: var(--tertiary);
 }
 
 button.favorites-list:active,
 .search-bar button:active,
 .search-bar select:active,
 .movie button:active {
-    background-color: #2d5b11;
+    box-shadow: inset 3px 3px 10px var(--shadow),
+        inset -3px -3px 10px var(--highlight);
 }
 
 .movie button:active,
@@ -155,7 +182,7 @@ button.favorites-list:active {
     height: 100vh;
     width: 100vw;
     background-color: rgba(49, 49, 49, 0.8);
-    color: white;
+    color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,9 +191,14 @@ button.favorites-list:active {
     right: 0;
     bottom: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .load-error h3 {
     font-size: 60px;
+}
+
+.movie button,
+button.favorites-list {
+    box-shadow: 5px 5px 10px #0c1e31;
 }

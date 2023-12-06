@@ -1,0 +1,171 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #00072D;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.favorites {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+}
+
+.favorites img {
+    width: 50px
+}
+
+button.favorites-list {
+    width: 112px;
+    margin: 0;
+    background-color: #378805;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.search-bar {
+    margin: 40px auto;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    height: 40px;
+    width: 255px;
+    border: none;
+    padding: 0 0 0 10px;
+    outline: none;
+}
+
+.search-bar button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #378805;
+    border-radius: 0 20px 20px 0;
+    color: white;
+    font-size: 16px;
+    padding: 0 7px 0 0;
+    cursor: pointer;
+}
+
+.search-bar select {
+    appearance: none;
+    background-color: #378805;
+    border: none;
+    padding: 10px 5px 10px 15px;
+    border-radius: 20px 0 0 20px;
+    color: white;
+    height: 40px;
+}
+
+.search-bar select:hover {
+    cursor: pointer;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.movie {
+    width: 280px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+
+.movie button.watchlist {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    padding: 5px 5px 4px 5px;
+    border-radius: 50px;
+}
+
+.movie button.watchlist i {
+    font-size: 20px;
+}
+
+.movie img {
+    height: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie button {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #378805;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+a.top {
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+a.top i {
+    font-size: 30px;
+}
+
+a.top:active {
+    color: #378805;
+}
+
+button.favorites-list:active,
+.search-bar button:active,
+.search-bar select:active,
+.movie button:active {
+    background-color: #2d5b11;
+}
+
+.movie button:active,
+button.favorites-list:active {
+    transform: scale(0.95);
+}
+
+.load-error {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(49, 49, 49, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.load-error h3 {
+    font-size: 60px;
+}

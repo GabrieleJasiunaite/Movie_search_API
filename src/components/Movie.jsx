@@ -33,7 +33,7 @@ const Movie = ({ moviesData, saveFavMovie, removeFavMovie, favoriteMovies }) => 
                 <div className="movie" key={movie.id}>
                     <Button movie={movie} saveFavMovie={saveFavMovie} removeFavMovie={removeFavMovie} isFavorite={favoriteMovies.some(film => film.id === movie.id)} />
                     <img src={imgString + movie.poster_path} alt={movie.original_title} />
-                    <h3>{movie.original_title} ({movie.release_date.slice(0, 4)})</h3>
+                    <h3>{movie.title} ({movie.release_date.slice(0, 4)})</h3>
                     <button onClick={() => getDetails(movie.id)}>Details</button>
                 </div>
             ))

@@ -9,7 +9,7 @@ const Modal = ({ movieDetails, toggleModal, isLoading, error }) => {
             <div className='modal'>
                 <div onClick={toggleModal} className='overlay'></div>
                 <div className='modal-content'>
-                    <h4>Movie Details: {movieDetails.original_title}</h4>
+                    <h4>Movie Details: {movieDetails.title}</h4>
                     <p><strong>Runtime: </strong>{movieDetails.runtime} mins</p>
                     <p><strong>Genres: </strong>{movieDetails.genres.map(genre => genre.name + " ")}</p>
                     <p><strong>Box Office: </strong>{(movieDetails.revenue / 1000000).toFixed(2)} mln.</p>
